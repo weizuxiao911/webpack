@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>example</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #root {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            min-height: 14px;
+            box-sizing: border-box;
+        }
+
+        [contenteditable] *:empty::before {
+            content: attr(placeholder);
+            color: #999;
+        }
+
+        [contenteditable] {
+            display: block;
+            width: 100%;
+            min-height: 14px;
+        }
+
+        [contenteditable]:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="dev.js"></script>
+</body>
+
+</html>
